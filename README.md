@@ -1,64 +1,41 @@
-# Transformer From Scratch 🚀
+Layout
 
-## About the Project
+app.py              Flask app
+main.py             Train and print metrics
+data/               CSV
+templates/          Login and dashboard
+utils/              Data, model, recommendations
+model/              Saved joblib bundle
 
-This repository documents my journey of implementing the Transformer architecture completely from scratch using PyTorch.
 
-Instead of relying on high-level implementations, I aim to understand every component mathematically and implement it step by step.
+## Transformer from Scratch
 
-This project is inspired by the paper **"Attention Is All You Need"** and serves as a learning resource as well as a portfolio project.
+```markdown
+# Transformer from Scratch
 
----
+Module layout for a PyTorch Transformer following *Attention Is All You Need*. The repository is the file map for that model. The layer files are still placeholders.
 
-## Goals
+## Intended modules
 
-- Understand the mathematics behind Transformers.
-- Implement every module from scratch.
-- Write clean, modular, and well-documented code.
-- Train the Transformer on a machine translation dataset.
-- Share daily progress through GitHub and LinkedIn.
+| File | Role |
+| --- | --- |
+| `models/embedding.py` | Token embeddings |
+| `models/positional_encoding.py` | Sinusoidal positional encoding |
+| `models/attention.py` | Scaled dot-product attention |
+| `models/multi_head_attention.py` | Multi-head attention with learned Q, K, V, and output projections |
+| `models/feed_forward.py` | Position-wise feed-forward block |
+| `models/layer_norm.py` | Layer normalization |
+| `models/encoder.py` | Encoder stack |
+| `models/decoder.py` | Decoder stack |
+| `models/transformer.py` | Full model |
+| `train.py` | Training loop |
+| `inference.py` | Generation |
 
----
+Each of those files currently contains a docstring and a TODO. `notes/day1.md` is an empty study note. There is no dataset, checkpoint, or measured translation score in this repository.
 
-## Project Structure
+## Setup
 
-(keep your existing project structure here)
-
----
-
-## Development Roadmap
-
-- [ ] Token Embedding
-- [ ] Positional Encoding
-- [ ] Scaled Dot Product Attention
-- [ ] Multi-Head Attention
-- [ ] Feed Forward Network
-- [ ] Layer Normalization
-- [ ] Encoder
-- [ ] Decoder
-- [ ] Complete Transformer
-- [ ] Dataset Preparation
-- [ ] Training
-- [ ] Inference
-
----
-
-## Tech Stack
-
-- Python
-- PyTorch
-- VS Code
-- Git
-- GitHub
-
----
-
-## Progress
-
-### ✅ Day 1
-- Project setup
-- Folder structure
-- Architecture study
-- Development roadmap created
-
-More updates coming soon...
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
