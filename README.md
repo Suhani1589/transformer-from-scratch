@@ -1,21 +1,8 @@
-Layout
-
-app.py              Flask app
-main.py             Train and print metrics
-data/               CSV
-templates/          Login and dashboard
-utils/              Data, model, recommendations
-model/              Saved joblib bundle
-
-
-## Transformer from Scratch
-
-```markdown
 # Transformer from Scratch
 
-Module layout for a PyTorch Transformer following *Attention Is All You Need*. The repository is the file map for that model. The layer files are still placeholders.
+Module layout for a PyTorch Transformer following *Attention Is All You Need*.
 
-## Intended modules
+## Modules
 
 | File | Role |
 | --- | --- |
@@ -31,7 +18,7 @@ Module layout for a PyTorch Transformer following *Attention Is All You Need*. T
 | `train.py` | Training loop |
 | `inference.py` | Generation |
 
-Each of those files currently contains a docstring and a TODO. `notes/day1.md` is an empty study note. There is no dataset, checkpoint, or measured translation score in this repository.
+These files are placeholders. The repository has no dataset, checkpoint, or translation score yet.
 
 ## Setup
 
@@ -39,3 +26,6 @@ Each of those files currently contains a docstring and a TODO. `notes/day1.md` i
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+```
+
+Dependencies: PyTorch, NumPy, pandas, Matplotlib, tqdm.
