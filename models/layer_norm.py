@@ -3,5 +3,25 @@
 This module will eventually define normalization layers used to stabilize
 Transformer training.
 """
+import torch
+import torch.nn as nn
 
-# TODO: Implement layer normalization.
+class LayerNorm(nn.Module):
+    def __init__(self, d_model, eps=1e-6):
+
+        self.gamma = nn.Parameter(torch.ones(d_model))
+        self.beta = nn.Parameter(torch.zeros(d_model))
+
+        self.eps = eps
+    def forward(self , x):
+        mean = x.mean(dim=-1, keepdim=True)
+         
+        variance = x.var(dim=-1, keepdim=True, unbiased=False)
+
+        
+        x_normalized = (x - mean) / torch.sqrt(variance + self.eps)
+
+      
+        output = self.gamma * x_normalized + self.beta
+
+        return output

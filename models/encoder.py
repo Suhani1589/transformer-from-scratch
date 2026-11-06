@@ -4,4 +4,4 @@ This module will eventually define encoder blocks and the complete Transformer
 encoder stack.
 """
 
-# TODO: Implement Transformer encoder.
+
